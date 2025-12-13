@@ -1,0 +1,98 @@
+html {
+  font-size: clamp(14px, 1.2vw, 16px); /* TO MAKE IT RESPONSIVE AND INTERACTIVE FOR VARIOUS DEVICE 14PX FOR SMALLER SCREEEN AND 16PX LARGER SCREEN LIKE DESKTOP AND 1.2 IS VIEWWIDTH SCALE */
+}
+* { /* APPLIED TO ALL ELEMENT */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+   background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("StockSnap_574NJNOS59.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: space;
+  font-family: 'Arial';
+  min-width: 50%;    /* TO MAKE IT TO THE SIZE OF SCREEN */
+  min-height: 100vh;   /* NORMALLY IT SET WITH VH OR VIEW HEIGHT */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+p {
+  /* to make text for gradient color
+  background: linear-gradient(to right, rgb(101, 2, 121), rgb(75, 36, 214), rgb(191, 17, 207));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: whitesmoke;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.todo-grid, .todo-grid-container {
+  display: grid;
+  grid-template-columns: 16rem 12rem 8rem;
+  row-gap: 0.75rem;
+  column-gap: 0.75rem;
+  align-items: center;
+}
+.todo-grid div {
+  color: rgb(0, 0, 0);
+  background-color: rgb(243, 245, 245);
+  text-align: center;
+  padding: 10px 15px;
+}
+.dlt-button {
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.dlt-button:hover {
+  opacity: 0.7;
+}
+.dlt-button:active {
+  opacity: 0.5;
+}
+.name-input , .date-input {
+  padding: 0.45rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  outline: none;
+  text-align: center;
+}
+.name-input:focus , .date-input:focus { /* when clicked on input*/
+  border-color: rgb(28, 139, 28);
+  box-shadow: 0 0 10px rgba(44, 100, 11, 0.4);
+}
+.add-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+.add-button:hover {
+  box-shadow: 0.3rem 0.3rem 1rem rgba(20, 20, 20, 0.7);
+}
+.add-button:active {
+  background-color: hsl(135, 95%, 34%);
+}
+.todo-grid-container {
+  align-items: stretch;
+  margin-bottom: 0.75rem;
+}
+span {
+  color: rgb(248, 240, 235);
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}

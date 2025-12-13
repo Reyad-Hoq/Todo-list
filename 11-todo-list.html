@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles/11-todo-list.css">
+  </head>
+  <body>
+      <p>Todo List</p>
+      <div class="todo-grid-container">
+        <input placeholder="To do name" class="js-name-input name-input" onkeydown="
+          TodoKeydown(event);
+        ">
+        <input type="date" class="js-date-input date-input">
+        <button onclick="
+          addTodo(); //COMBINING BOTH TODO & DATE INPUT BY THIS ADDTODO FUNC BY CALLING CLASS 
+        " class="add-button">Add
+        </button>
+
+        <div class="js-todo-list todo-grid">
+          
+        </div>
+      </div>
+      <span>All rights reserved by Reyad Hoq &#169;2025
+      </span>
+    <script src="scripts/11-todo-list.js"> </script>
+  </body>
+</html>
