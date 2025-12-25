@@ -25,7 +25,7 @@ function renderTodoList() {
     todoListHTML += html;
   }); 
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
-};
+}
 
 function addTodo () {
   const inputElement = document.querySelector('.js-name-input'); //FETCH THE VALUE FROM INPUT TO JS FUNC
@@ -53,5 +53,6 @@ function TodoKeydown (event) {
     addTodo();
   }
 }
+
 
 
