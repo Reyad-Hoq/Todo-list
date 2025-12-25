@@ -17,15 +17,15 @@ function renderTodoList() {
       <div> ${name} </div>
       <div> ${dueDate} </div>
       <button onclick="
-        todoList.splice(${i}, 1);
+        todoList.splice(${index}, 1);
         renderTodoList();
         " class="dlt-button
       "> Delete </button>
-    `; //HERE ${i} WILL BE DETECTED THE INDEX OF WHATEVER TODOLIST WE CLICK ON
+    `;
     todoListHTML += html;
   }); 
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
-}
+};
 
 function addTodo () {
   const inputElement = document.querySelector('.js-name-input'); //FETCH THE VALUE FROM INPUT TO JS FUNC
@@ -53,4 +53,5 @@ function TodoKeydown (event) {
     addTodo();
   }
 }
+
 
