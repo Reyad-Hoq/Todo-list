@@ -11,17 +11,9 @@ renderTodoList (); //KEEP THIS FUNCTION TO SHOW THE LIST FROM BEGINNING
 function renderTodoList() {
 
   let todoListHTML = '';
-
-  for (let i = 0; i < todoList.length; i++) {
-
-    const todoObject = todoList[i];
-    
-    //const name = todoObject.name;
-    //const dueDate = todoObject.dueDate;
-
-    const {name, dueDate} = todoObject;
-
-    const html = `
+  todoList.forEach((todoObject, index) => {
+      const {name, dueDate} = todoObject;
+      const html = `
       <div> ${name} </div>
       <div> ${dueDate} </div>
       <button onclick="
@@ -30,12 +22,9 @@ function renderTodoList() {
         " class="dlt-button
       "> Delete </button>
     `; //HERE ${i} WILL BE DETECTED THE INDEX OF WHATEVER TODOLIST WE CLICK ON
-
     todoListHTML += html;
-
+  }); 
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
-  }
-
 }
 
 function addTodo () {
@@ -64,3 +53,4 @@ function TodoKeydown (event) {
     addTodo();
   }
 }
+
